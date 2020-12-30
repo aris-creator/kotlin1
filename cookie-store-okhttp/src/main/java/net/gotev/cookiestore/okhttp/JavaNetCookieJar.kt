@@ -34,9 +34,9 @@ class JavaNetCookieJar(private val cookieHandler: CookieHandler) : CookieJar {
     private val STANDARD_DATE_FORMAT = object : ThreadLocal<DateFormat>() {
         override fun initialValue(): DateFormat {
             // Date format specified by RFC 7231 section 7.1.1.1.
-            return SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss 'GMT'", Locale.US).apply {
+            return SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss 'GMT+7'", Locale.Bangkok).apply {
                 isLenient = false
-                timeZone = TimeZone.getTimeZone("GMT")
+                timeZone = TimeZone.getTimeZone("GMT+7")
             }
         }
     }
