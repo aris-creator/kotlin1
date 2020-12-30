@@ -1,1 +1,1 @@
-include ':cookie-store', ':cookie-store-okhttp'
+include ':alaraja_store', ':alaraja_store'
